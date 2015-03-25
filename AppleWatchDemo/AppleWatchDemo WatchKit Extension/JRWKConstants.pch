@@ -1,0 +1,46 @@
+//
+//  JRWKConstants.pch
+//  AppleWatchDemo
+//
+//  Created by JerryLiu on 15/2/19.
+//  Copyright (c) 2015年 JerryLiu. All rights reserved.
+//
+
+#ifndef AppleWatchDemo_JRWKConstants_pch
+#define AppleWatchDemo_JRWKConstants_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif
+
+
+//UserDefult Key
+#define AWdemo_IMAGE_NAMES_USERDEFAULT_KEY @"userdefult_key_for_aw_demonamesstring"
+
+//Apple Watch Physics Parameter
+#define AppleWatchScreenWidth [[WKInterfaceDevice currentDevice] screenBounds].size.width
+#define AppleWatchScreenHeight [[WKInterfaceDevice currentDevice] screenBounds].size.height
+
+#define is38mm ([[WKInterfaceDevice currentDevice] screenBounds].size.width == 136)
+#define is42mm ([[WKInterfaceDevice currentDevice] screenBounds].size.width == 156)
+
+//Reply recommend tips
+#define RECOMMEND_TIP_ONE @"Apple Watch好帅"
+#define RECOMMEND_TIP_TWO @"太贵了"
+#define RECOMMEND_TIP_THREE @"我要买最贵的那个"
+#define RECOMMEND_TIP_FOUR @"我要"
+#define RECOMMEND_TIP_FIVE @"我了个去"
+#define kWatchRecommendCommentTips @[RECOMMEND_TIP_ONE, RECOMMEND_TIP_TWO, RECOMMEND_TIP_THREE, RECOMMEND_TIP_FOUR, RECOMMEND_TIP_FIVE]
+
+//NSNotification Key
+#define AW_demoDETAILPAGE_TO_MAINPAGE @"notification_for_demodetail_to_mainpage"
+#define AW_JUMP_FROM_INDICATEPAGE_TO_MAINPAGE @"notification_to_indicatepage_to_mainpage"
+
+//Controller Identifier
+#define WKdemoPAGECONTROLLERIDENTIFIER @"PagedemoRowController"
+#define WKdemoDETAILCONTROLLERIDENTIFIER @"demoDetailController"
+#define WKINDICATECONTROLLERIDENTIFIER @"StateIndicateController"
+
+//handoff key
+#define WK_HANDOFF_demoDETAIL_IDENDIFIER @"com.sse.uste.watchkitdemo"

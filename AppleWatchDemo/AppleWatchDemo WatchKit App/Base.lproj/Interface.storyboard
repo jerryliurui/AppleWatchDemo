@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--Main Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="JRMainInterfaceController"/>
+            </objects>
+            <point key="canvasLocation" x="235" y="347"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="BOz-TT-tkC">
+            <objects>
+                <glanceController spacing="0.0" topTemplateType="body1Large" id="0uZ-2p-rRc" customClass="GlanceController">
+                    <items>
+                        <label alignment="left" text="Apple Watch" id="dUv-Bl-z62"/>
+                        <label alignment="left" text="Demo" id="jBC-PX-nGQ"/>
+                        <group alignment="left" backgroundImage="demoglancepic" id="uCw-4Q-Ouw"/>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="235" y="672"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="XkS-y5-khE"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="NEWS_CATEGORY" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="XkS-y5-khE" id="49B-RR-99y"/>
+                        <segue destination="gdX-wl-uQE" kind="relationship" relationship="dynamicNotificationInterface" id="fKh-qV-3T2"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="235" y="1001"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="KIl-fV-djm">
+            <objects>
+                <controller id="gdX-wl-uQE" customClass="NotificationController">
+                    <items>
+                        <label alignment="left" text="Label" numberOfLines="0" id="en1-KX-EdI">
+                            <color key="textColor" red="1" green="0.13129208570000001" blue="0.10843699449999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <label alignment="left" text="Label" numberOfLines="0" id="frN-j9-sG3"/>
+                    </items>
+                    <connections>
+                        <outlet property="newsDigest" destination="frN-j9-sG3" id="Jo1-YK-5Ut"/>
+                        <outlet property="newsTitle" destination="en1-KX-EdI" id="m7j-dc-Yuk"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="553" y="1001"/>
+        </scene>
+        <!--PagedemoRowController-->
+        <scene sceneID="7ow-G3-MCw">
+            <objects>
+                <controller identifier="PagedemoRowController" id="ySb-bo-2r8" customClass="JRWKdemoRowController">
+                    <items>
+                        <table alignment="left" id="PDd-r7-o6g">
+                            <items>
+                                <tableRow identifier="RowForOnedemo" id="Oix-rf-VgP" customClass="JRWKdemoRow">
+                                    <group key="rootItem" width="1" height="140" alignment="left" contentMode="scaleAspectFill" layout="vertical" id="7og-PT-s6h">
+                                        <items>
+                                            <group width="50" height="16" alignment="left" verticalAlignment="bottom" contentMode="scaleAspectFit" layout="vertical" id="Pxx-Va-ga3">
+                                                <items>
+                                                    <label alignment="left" verticalAlignment="center" text="Label" id="DNg-os-oqk">
+                                                        <color key="textColor" red="1" green="0.13129208570000001" blue="0.10843699449999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="font" type="system" pointSize="11"/>
+                                                        <variation key="device=watch38mm">
+                                                            <fontDescription key="font" type="system" pointSize="9"/>
+                                                        </variation>
+                                                    </label>
+                                                </items>
+                                                <variation key="device=watch38mm" height="14" width="40"/>
+                                            </group>
+                                            <group width="1" alignment="left" verticalAlignment="bottom" backgroundImage="title_bg" layout="vertical" id="XXS-q4-Iz9">
+                                                <items>
+                                                    <label alignment="left" verticalAlignment="center" text="Label" numberOfLines="2" id="kYW-Gr-Q5q">
+                                                        <fontDescription key="font" type="boldSystem" pointSize="16"/>
+                                                        <variation key="device=watch38mm">
+                                                            <fontDescription key="font" type="boldSystem" pointSize="14"/>
+                                                        </variation>
+                                                    </label>
+                                                    <group height="21" alignment="left" verticalAlignment="bottom" radius="7" id="01y-TN-078">
+                                                        <items>
+                                                            <label alignment="left" verticalAlignment="center" text="Label" id="Y9D-8Q-P3X">
+                                                                <fontDescription key="font" type="system" pointSize="10"/>
+                                                                <variation key="device=watch38mm">
+                                                                    <fontDescription key="font" type="system" pointSize="9"/>
+                                                                </variation>
+                                                            </label>
+                                                            <timer alignment="center" verticalAlignment="center" format="abbreviated" id="B6a-e9-daZ">
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="font" type="system" pointSize="10"/>
+                                                                <variation key="device=watch38mm">
+                                                                    <fontDescription key="font" type="system" pointSize="9"/>
+                                                                </variation>
+                                                            </timer>
+                                                        </items>
+                                                        <variation key="device=watch38mm" height="13"/>
+                                                        <variation key="device=watch42mm" height="13"/>
+                                                    </group>
+                                                </items>
+                                            </group>
+                                        </items>
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                        <variation key="device=watch38mm" height="140"/>
+                                        <variation key="device=watch42mm" height="165"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="demoCategory" destination="DNg-os-oqk" id="v1h-zN-WHa"/>
+                                        <outlet property="demoCommentsCount" destination="Y9D-8Q-P3X" id="FJP-hp-Zca"/>
+                                        <outlet property="demoImage" destination="7og-PT-s6h" id="WmQ-gK-bNS"/>
+                                        <outlet property="demoTimer" destination="B6a-e9-daZ" id="D23-fR-t2v"/>
+                                        <outlet property="demoTitle" destination="kYW-Gr-Q5q" id="B8q-QL-lpw"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <variation key="device=watch38mm" title="Demo"/>
+                    <variation key="device=watch42mm" title="Demo"/>
+                    <connections>
+                        <outlet property="demoRowTabel" destination="PDd-r7-o6g" id="dTi-56-EaR"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="442" y="347"/>
+        </scene>
+        <!--返回-->
+        <scene sceneID="xEV-Ik-Aho">
+            <objects>
+                <controller identifier="demoDetailController" title="返回" id="mwq-Pr-KA1" customClass="JRWKdemoDetailController">
+                    <items>
+                        <label width="1" alignment="left" text="Label" numberOfLines="0" id="W1U-5d-NlY">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <group width="1" alignment="left" id="H1C-wD-pmL">
+                            <items>
+                                <label alignment="right" verticalAlignment="center" text="Label" id="0k0-tK-Ain">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </label>
+                                <timer alignment="right" verticalAlignment="center" format="abbreviated" id="VAL-Y4-xp4">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </timer>
+                            </items>
+                        </group>
+                        <group width="1" height="100" alignment="left" contentMode="scaleAspectFill" id="2TK-TT-sVl">
+                            <variation key="device=watch38mm" height="120"/>
+                            <variation key="device=watch42mm" height="140"/>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="5pU-Oz-WDR">
+                            <items>
+                                <label width="1" alignment="left" text="Label" numberOfLines="0" id="15y-oP-aMf"/>
+                                <label alignment="right" verticalAlignment="bottom" text="Label" id="4o2-xR-39F">
+                                    <fontDescription key="font" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
+                                    <variation key="device=watch38mm">
+                                        <fontDescription key="font" name="HelveticaNeue" family="Helvetica Neue" pointSize="8"/>
+                                    </variation>
+                                    <variation key="device=watch42mm">
+                                        <fontDescription key="font" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
+                                    </variation>
+                                </label>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="comment" destination="0k0-tK-Ain" id="aa2-1L-pG0"/>
+                        <outlet property="demoContent" destination="15y-oP-aMf" id="K9k-OH-2Mi"/>
+                        <outlet property="demoDetailTitle" destination="W1U-5d-NlY" id="e2f-n0-X00"/>
+                        <outlet property="demoImageGroup" destination="2TK-TT-sVl" id="Rgd-5I-TC9"/>
+                        <outlet property="demoTimer" destination="VAL-Y4-xp4" id="wfz-5d-vY3"/>
+                        <outlet property="tipsLabel" destination="4o2-xR-39F" id="PAR-PV-156"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="629" y="351.5"/>
+        </scene>
+        <!--返回-->
+        <scene sceneID="Pvz-0t-dut">
+            <objects>
+                <controller identifier="StateIndicateController" title="返回" id="YHd-PF-bDa" customClass="JRWKStateIndicateController">
+                    <items>
+                        <imageView alignment="center" verticalAlignment="center" id="F6P-BF-Ro9"/>
+                        <label height="41" alignment="center" verticalAlignment="center" text="Label" textAlignment="center" numberOfLines="2" id="Mv5-Ik-ibZ">
+                            <fontDescription key="font" type="system" pointSize="16"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="indicateBG" destination="F6P-BF-Ro9" id="SeH-tC-qdo"/>
+                        <outlet property="indicateTips" destination="Mv5-Ik-ibZ" id="hsO-Ds-Ksm"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="834" y="352"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,21 @@
+{
+    "aps": {
+        "alert": "Use this file to define a testing payload for your notifications. The aps dictionary specifies the category, alert text and title. The WatchKit Simulator Actions array can provide info for one or more action buttons in addition to the standard Dismiss button. Any other top level keys are custom payload. If you have multiple such JSON files in your project, you'll be able to select them when choosing to debug the notification interface of your Watch App.",
+        "title": "Apple Watch开发demo",
+        "replycount": "6666",
+        "newstime": "2015-03-16 11:46:25",
+        "category": "NEWS_CATEGORY"
+    },
+    "WatchKit Simulator Actions": [
+                                   {
+                                   "title": "赞",
+                                   "identifier": "like"
+                                   },
+                                   {
+                                   "title": "不喜欢",
+                                   "identifier": "unlike"
+                                   }
+                                   ],
+    
+    "customKey": "Use this file to define a testing payload for your notifications. The aps dictionary specifies the category, alert text and title. The WatchKit Simulator Actions array can provide info for one or more action buttons in addition to the standard Dismiss button. Any other top level keys are custom payload. If you have multiple such JSON files in your project, you'll be able to select them when choosing to debug the notification interface of your Watch App."
+}
